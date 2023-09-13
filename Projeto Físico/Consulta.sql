@@ -35,7 +35,7 @@ WHERE A.CPF = DA.CPF_aluno AND I.CPF = DA.CPF_instrutor;
 -- JUNÇÃO EXTERNA
 -- Listar todas as autoescolas e os instrutores coordenadores, mesmo que não tenham um coordenador atribuído.
 SELECT AUTOESCOLA.nome AS Nome_Autoescola, INSTRUTOR.nome AS Nome_Coordenador
-FROM AUTOESCOLA RIGHT JOIN IN INSTRUTOR ON AUTOESCOLA.CPF_coordenador = INSTRUTOR.CPF;
+FROM AUTOESCOLA RIGHT JOIN INSTRUTOR ON AUTOESCOLA.CPF_coordenador = INSTRUTOR.CPF;
 
 -- SEMI JUNÇÃO
 -- Listar os alunos que fizeram ao menos uma aula.
