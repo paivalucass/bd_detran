@@ -65,11 +65,10 @@ WHERE I.salario > (
 
 
 -- SUBCONSULTA DO TIPO LINHA
-
--- projetar os nomes dos alunos que  não fizeram o PRATICO
-SELECT A.NOME
-FROM ALUNO A
-WHERE NOT EXISTS (SELECT 1 FROM PRATICO B WHERE B.CPF_ALUNO = A.CPF);
+-- Encontrar o nome da autoescola em que um aluno está matriculado desde que essa matrícula não esteja bloqueada;
+SELECT nome 
+FROM AUTOESCOLA
+WHERE CPF = (SELECT CPF_aluno FROM MATRICULA WHERE CPF_aluno = CPF AND COD_detran IS NULL);
 
 -- SUBCONSULTA DO TIPO TABELA
 -- Listar os nomes dos alunos que passaram na prova prática.
