@@ -65,10 +65,6 @@ WHERE I.salario > (
 
 
 -- SUBCONSULTA DO TIPO LINHA
--- Encontrar os alunos que têm o mesmo CPF que o instrutor coordenador em qualquer autoescola.
-SELECT nome 
-FROM ALUNO
-WHERE CPF IN (SELECT CPF_coordenador FROM AUTOESCOLA);
 
 -- projetar os nomes dos alunos que  não fizeram o PRATICO
 SELECT A.NOME
