@@ -89,15 +89,16 @@ EXCEPTION
 END;
 /
 
--- PROCEDIMENTO QUE MOSTRA OS NOMES DO INSTRUTORES DE DETERMINADA AURTOESCOLA
-CREATE OR REPLACE PROCEDURE nome_instrutores(CNPJ_autoescola TRABALHA.CNPJ%TYPE) IS
+-- PROCEDIMENTO QUE MOSTRA OS CPFS DO INSTRUTORES DE DETERMINADA AURTOESCOLA
+CREATE OR REPLACE PROCEDURE cpf_instrutores(CNPJ_autoescola TRABALHA.CNPJ%TYPE) IS
     CURSOR cur_instrutores IS
-        SELECT I.nome
-        FROM TRABALHA T INNER JOIN INSTRUTOR I ON T.CPF_instrutor = I.CPF
+        SELECT CPF_instrutor
+        FROM TRABALHA
+        WHERE CNPJ = CNPJ_autoescola;
     BEGIN
         DBMS_OUTPUT.PUT_LINE('Quantidade de instrutores da autoescola' ||CNPJ_autoescola||':');
         FOR reg_cursor IN cur_instrutores LOOP
-            DBMS_OUTPUT.PUT_LINE('Instrutor:' ||reg_cursor.nome);
+            DBMS_OUTPUT.PUT_LINE('Instrutor:' ||reg_cursor.CPF_instrutor);
         END LOOP;
     END;
 
