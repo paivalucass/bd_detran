@@ -18,6 +18,8 @@ INSERT INTO INSTRUTOR (CPF, nome, salario) VALUES ('56700813271', 'Tiago', 40000
 INSERT INTO INSTRUTOR (CPF, nome, salario) VALUES ('10230198816', 'Julia', 50000);
 INSERT INTO INSTRUTOR (CPF, nome, salario) VALUES ('12345670901', 'Geraldo', 8002);
 INSERT INTO INSTRUTOR (CPF, nome, salario) VALUES ('12345678881', 'Stefan Blawid', 99999);
+INSERT INTO INSTRUTOR (CPF, nome, salario) VALUES ('12345678899', 'Jefferson', 99999);
+
 
 -- POVOAMENTO DETRAN
 INSERT INTO DETRAN (COD, endereço_logradouro, endereço_CEP) VALUES (1, 'Rua do Azul', '12345678');  
